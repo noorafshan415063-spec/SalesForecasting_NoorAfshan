@@ -22,9 +22,8 @@ df = load_data()
 
 st.write(df.head())
 
-# ==============================
+
 # Sidebar
-# ==============================
 
 st.sidebar.title("Navigation")
 
@@ -60,9 +59,9 @@ if page == "Sales Overview":
 
     c4.metric("Regions", total_regions)
 
-        # -----------------------------
+    
     # Sales by Year
-    # -----------------------------
+ 
     st.subheader("Total Sales by Year")
 
     yearly_sales = (
@@ -85,9 +84,8 @@ if page == "Sales Overview":
     st.pyplot(fig)
 
 
-        # -----------------------------
     # Monthly Sales Trend
-    # -----------------------------
+    
     st.subheader("Monthly Sales Trend")
 
     monthly_sales = (
@@ -110,9 +108,9 @@ if page == "Sales Overview":
     st.pyplot(fig)
 
 
-        # -----------------------------
+       
     # Interactive Filters
-    # -----------------------------
+  
     st.subheader("Sales by Region and Category")
 
     region = st.selectbox(
@@ -144,9 +142,9 @@ if page == "Sales Overview":
     )
 
 
-    # ==========================================================
+   
 # Forecast Explorer
-# ==========================================================
+
 
 elif page == "Forecast Explorer":
 
@@ -251,9 +249,9 @@ elif page == "Forecast Explorer":
     )
 
 
-    # ==========================================================
+    
 # Anomaly Report
-# ==========================================================
+
 
 elif page == "Anomaly Report":
 
@@ -271,9 +269,9 @@ elif page == "Anomaly Report":
     unusual business events.
     """)
 
-    # --------------------------------------------------
+   
     # Isolation Forest
-    # --------------------------------------------------
+   
 
     st.subheader("Isolation Forest Anomaly Detection")
 
@@ -283,18 +281,18 @@ elif page == "Anomaly Report":
     use_container_width=True
 )
 
-    # --------------------------------------------------
+    
     # Z-Score
-    # --------------------------------------------------
+  
 
     st.image(
     "charts/zscore_anomaly.png",
     caption="Anomalies detected using the Z-Score statistical method.",
     use_container_width=True
 )
-    # --------------------------------------------------
+   
     # Business Summary
-    # --------------------------------------------------
+    
 
     st.subheader("Business Summary")
 
@@ -315,9 +313,9 @@ elif page == "Anomaly Report":
     """)
 
 
-    # ==========================================================
+    
 # Product Demand Segments
-# ==========================================================
+
 
 elif page == "Product Demand Segments":
 
@@ -336,9 +334,9 @@ elif page == "Product Demand Segments":
     to make better stocking and inventory planning decisions.
     """)
 
-    # --------------------------------------------------
+
     # Cluster Chart
-    # --------------------------------------------------
+  
 
     st.subheader("Product Demand Clusters")
 
@@ -348,9 +346,9 @@ elif page == "Product Demand Segments":
         use_container_width=True
     )
 
-    # --------------------------------------------------
+    
     # Cluster Table
-    # --------------------------------------------------
+   
 
     st.subheader("Sub-Categories and Assigned Clusters")
 
@@ -384,9 +382,9 @@ elif page == "Product Demand Segments":
 
     st.dataframe(cluster_table)
 
-    # --------------------------------------------------
+    
     # Cluster Statistics
-    # --------------------------------------------------
+   
 
     st.subheader("Cluster Summary")
 
@@ -406,9 +404,9 @@ elif page == "Product Demand Segments":
 
     st.dataframe(cluster_summary)
 
-    # --------------------------------------------------
+    
     # Business Recommendations
-    # --------------------------------------------------
+   
 
     st.subheader("Recommended Stocking Strategy")
 
